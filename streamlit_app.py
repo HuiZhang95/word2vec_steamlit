@@ -68,4 +68,4 @@ user_input_number = st.number_input("number of similar words: ", 1)
 
 output_st = print_closest(user_input_word, user_input_number)
 
-st.write('Here is the list of similar words :\n', output_st)
+st.write('Here is the list of similar words :\n', output_st = 'romantic')
