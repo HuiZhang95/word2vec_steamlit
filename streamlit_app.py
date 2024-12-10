@@ -11,16 +11,16 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
     word2idx, idx2word, vocab_size = pickle.load(f)
 
 
-embedding_dim = 300
-model = Sequential()
-model.add(Embedding(vocab_size, embedding_dim))
-model.add(GlobalAveragePooling1D())
-model.add(Dense(vocab_size, activation='softmax'))
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+# embedding_dim = 300
+# model = Sequential()
+# model.add(Embedding(vocab_size, embedding_dim))
+# model.add(GlobalAveragePooling1D())
+# model.add(Dense(vocab_size, activation='softmax'))
+# model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-model.load_weights("word2vec.h5")
+# model.load_weights("word2vec.h5")
 
-# model = load_model('word2vec.h5')
+model = load_model('word2vec.h5')
 
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
@@ -61,11 +61,11 @@ def print_closest(word, number=10):
     for index_word in index_closest_words :
         print(idx2word[index_word[1]]," -- ",index_word[0])
 
-print_closest('zombie')
+# print_closest('zombie')
 
 user_input_word = st.text_input("Input a word: ", 'love')
 user_input_number = st.number_input("number of similar words: ", 1)
 
 output_st = print_closest(user_input_word, user_input_number)
 
-st.write('Here is the list of similar words :\n', print_closest(user_input_word, user_input_number))
+st.write('Here is the list of similar words :\n', output_st)
