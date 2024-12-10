@@ -2,6 +2,8 @@ import streamlit as st
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
 import pickle
+from keras.models import load_model
+
 
 st.title("model of Word2Vec")
 
@@ -9,13 +11,15 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
     word2idx, idx2word, vocab_size = pickle.load(f)
 
 
-embedding_dim = 300
-model = Sequential()
-model.add(Embedding(vocab_size, embedding_dim))
-model.add(GlobalAveragePooling1D())
-model.add(Dense(vocab_size, activation='softmax'))
+# embedding_dim = 300
+# model = Sequential()
+# model.add(Embedding(vocab_size, embedding_dim))
+# model.add(GlobalAveragePooling1D())
+# model.add(Dense(vocab_size, activation='softmax'))
 
-model.load_weights("word2vec.h5")
+# model.load_weights("word2vec.h5")
+
+model = load_model('word2vec.h5')
 
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
