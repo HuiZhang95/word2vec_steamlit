@@ -2,14 +2,14 @@ import streamlit as st
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
 import pickle
-import hickle
+# import hickle
 
 st.title("model of Word2Vec")
 
-# with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
-#     word2idx, idx2word, vocab_size = pickle.load(f)
+with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
+    word2idx, idx2word, vocab_size = pickle.load(f)
 
-word2idx, idx2word, vocab_size = hickle.load('vocab_info')
+# word2idx, idx2word, vocab_size = hickle.load('vocab_info')
 
 embedding_dim = 300
 model = Sequential()
