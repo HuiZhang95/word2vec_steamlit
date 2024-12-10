@@ -21,7 +21,7 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
 # model.load_weights("word2vec.h5")
 
 model = load_model('word2vec.h5')
-
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
 # words are related to each other
