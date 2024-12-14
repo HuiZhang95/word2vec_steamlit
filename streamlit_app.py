@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib#pickle
 
 
 st.title("model of Word2Vec")
@@ -22,6 +22,8 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
 
 # with open('model_pickle','rb') as f:  # Python 3: open(..., 'rb')
 #     model = pickle.load(f)
+
+# model = joblib.load("word2vec_joblib")
 
 from keras.models import load_model
 model = load_model('word2vec.h5')

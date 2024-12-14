@@ -2,5 +2,5 @@ streamlit
 numpy==2.0
 scikit-learn==1.6.0
 setuptools
-Eras
+keras
 tensorflow
