@@ -1,6 +1,5 @@
 streamlit
 numpy==2.0
 scikit-learn==1.6.0
-setuptools
 keras
 tensorflow==2.12.0
