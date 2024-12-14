@@ -1,8 +1,5 @@
 import streamlit as st
-from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
 import pickle
-from tensorflow.keras.models import load_model
 
 
 st.title("model of Word2Vec")
