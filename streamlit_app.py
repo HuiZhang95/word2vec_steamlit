@@ -20,8 +20,11 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
 # model = load_model('word2vec.h5')
 # model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-with open('model_pickle','rb') as f:  # Python 3: open(..., 'rb')
-    model = pickle.load(f)
+# with open('model_pickle','rb') as f:  # Python 3: open(..., 'rb')
+#     model = pickle.load(f)
+
+from keras.models import load_model
+model = load_model('word2vec.h5')
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
 # words are related to each other
