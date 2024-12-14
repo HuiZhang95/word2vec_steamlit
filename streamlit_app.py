@@ -27,7 +27,7 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
 # model = joblib.load("word2vec_joblib")
 
 from keras.models import load_model
-model = load_model('word2vec.h5')
+model = load_model('word2vec.h5', compile = False)
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
 # words are related to each other
