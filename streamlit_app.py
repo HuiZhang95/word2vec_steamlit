@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib#
+import joblib
 import pickle
 
 
@@ -24,10 +24,10 @@ with open('vocab_infor.pkl','rb') as f:  # Python 3: open(..., 'rb')
 # with open('model_pickle','rb') as f:  # Python 3: open(..., 'rb')
 #     model = pickle.load(f)
 
-# model = joblib.load("word2vec_joblib")
+model = joblib.load("word2vec_joblib")
 
-from keras.models import load_model
-model = load_model('word2vec.h5')
+# from keras.models import load_model
+# model = load_model('word2vec.h5')
 
 # Similarity is a metric which measures the distance between two words. This distance represents the way 
 # words are related to each other
