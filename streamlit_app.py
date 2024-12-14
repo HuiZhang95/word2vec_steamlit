@@ -1,5 +1,6 @@
 import streamlit as st
-import joblib#pickle
+import joblib#
+import pickle
 
 
 st.title("model of Word2Vec")
